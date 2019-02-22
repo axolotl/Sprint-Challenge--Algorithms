@@ -19,3 +19,5 @@ Runtime: linear
 For each time the function recurs, the input value is reduced by one. And when the input value reaches zero, the function will stop recuring. The function will thus run a number of times that is equal to the input value, making the runtime O(n).
 
 Exercise II
+
+The plan to zero in on floor _f_ involves maximizing the number floors that _f_ is not for each egg we drop. So we start at the middle floor and drop an egg. If it breaks, we know that _f_ must be on the lower half of the building. So then we move to the middle of that section and drop an other egg. In each step, we cut the remaining possible floors in half, drop an egg, and see if the middle value is too high or too low. In this way we will arrive at floor _f_ in O(log(n)) steps.
